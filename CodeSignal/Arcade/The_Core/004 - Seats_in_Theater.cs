@@ -1,6 +1,6 @@
 // Basic Solution
 
-int seatsInTheater1(int nCols, int nRows, int col, int row) {
+int seatsInTheater(int nCols, int nRows, int col, int row) {
     int affect = (nCols - col + 1) * (nRows - row);
     return affect;
 }
