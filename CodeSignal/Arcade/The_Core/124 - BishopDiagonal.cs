@@ -14,7 +14,6 @@ string[] solution(string bishop1, string bishop2) {
     } else {
         if(letter1 - letter2 < 0 && 0 < digit1 - digit2) {
             // If bishop2 is down-right of bishop1
-            Console.WriteLine("1");
             while(0 < letter1 && digit1 < 7) {
                 letter1--;
                 digit1++;
@@ -25,7 +24,6 @@ string[] solution(string bishop1, string bishop2) {
             }
         } else if(0 < letter1 - letter2 && 0 < digit1 - digit2) {
             // If bishop2 is down-left of bishop1
-            Console.WriteLine("2");
             while(letter1 < 7 && digit1 < 7) {
                 letter1++;
                 digit1++;
@@ -36,7 +34,6 @@ string[] solution(string bishop1, string bishop2) {
             }
         } else if(0 < letter1 - letter2 && digit1 - digit2 < 0) {
             // If bishop2 is up-left of bishop1
-            Console.WriteLine("3");
             while(0 < digit1 && letter1 < 7) {
                 letter1++;
                 digit1--;
@@ -47,7 +44,6 @@ string[] solution(string bishop1, string bishop2) {
             }
         } else {
             // If bishop2 is up-right of bishop1
-            Console.WriteLine("4");
             while(0 < digit1 && 0 < letter1) {
                 letter1--;
                 digit1--;
