@@ -49,3 +49,13 @@ int solution(int n, int m) {
 bool canRookStrike(int knightI, int knightJ, int rookI, int rookJ) => (rookI == knightI || rookJ == knightJ);
 
 bool canBishopStrike(int knightI, int knightJ, int bishopI, int bishopJ) => Math.Abs(bishopI - knightI) == Math.Abs(bishopJ - knightJ);
+
+/*-------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+
+// A mathematical solution
+
+int solution(int n, int m) => times(n, m, 2, 3) + times(n, m, 3, 3) + times(n, m, 2, 4) + times(n, m, 3, 4);
+
+int ways(int n, int m, int x, int y) => ((n < x || m < y) ? 0 : (n - x + 1) * (m - y + 1));
+int times(int n, int m, int x, int y) => (ways(n, m, x, y) + ways(m, n, x, y)) * 8;
